@@ -102,7 +102,8 @@ section h2 {
 }
 
 #mainNav .navbar-brand {
-  color: #fff;
+  color: white;
+  text-shadow: 2px 2px 5px goldenrod;
 }
 
 #mainNav .navbar-nav {
@@ -344,11 +345,12 @@ a:focus, a:hover, a:active {
 }
 
 .bg-primary {
-  background-color: #18BC9C !important;
+  /* background:/linear-gradient(to right, #b71c1c 0%, #040405 60%)!important; */
+  background: black!important;
 }
 
 .bg-secondary {
-  background-color: #2C3E50 !important;
+  background:linear-gradient(to left, #0090e7 0%, #040405 60%)!important;
 }
 
 .text-primary {
@@ -377,4 +379,44 @@ a:focus, a:hover, a:active {
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   background-color: #1a252f;
   border-color: #1a252f;
+}
+
+.heading-main{
+  text-shadow: 0px 5px 15px #0090e7;
+}
+
+.ripple {
+  margin: auto;
+  /* margin-top: 15rem; */
+  /* background-color: teal; */
+  width: 15rem;
+  height: 15rem;
+  border-radius: 80%;
+  /* position:relative; */
+  animation: ripple 3s linear infinite;
+}
+.ripple::before,
+/* .ripple::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  border-radius: 50%;
+  animation: ripple 3s linear infinite 1s;
+} */
+.ripple::after {
+  animation: ripple 3s linear infinite 2s;
+}
+@keyframes ripple {
+  0% {
+    box-shadow: 0 0 0 0rem rgba(17,73,123, 1);
+  }
+  /* 50% {
+    box-shadow: 0 0 0 5rem rgba(0,158,228, 0.8);
+  } */
+  100% {
+    box-shadow: 0 0 0 8rem rgba(17,73,123, 0.2);
+  }
 }
