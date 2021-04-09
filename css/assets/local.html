@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>page1</title>
+  </head>
+  <body>
+    <div>
+      <div class="header">
+        <div class="dts-logo">
+          <p>DTS Transact</p>
+        </div>
+        <div class="header-title">
+          <p>We're better when we're connected</p>
+        </div>
+        <div class="boa-logo">
+          <img src="./assets/BOALogo.jpg" alt="boa_logo" />
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="left-division">
+          <ul class="menu">
+            <li class="list"><i class="fas fa-home"></i><a href="#">Home</a>
+              <ul class="items">
+                <li><i class="fas fa-plus"></i><a href="#">Create New</a></li>
+                <li><i class="fas fa-clipboard-check"></i><a href="#">Update</a></li>
+                <li><i class="fas fa-bolt"></i><a href="#">Active/Inactive</a></li>
+              </ul>
+            </li>
+            <li class="list"><i class="fas fa-desktop"></i><a href="#">Request</a>
+            </li>
+            
+          </ul>
+        </div>
+        <div class="right-division">
+          <div class="image-carousel">
+            <div class="carousel-slide">
+              <div class="carousel-img">
+              </div>
+              <div class="carousel-content">
+              </div>
+            </div>
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/BOALogo.jpg" alt="">
+              </div>
+              <div class="carousel-content">
+              </div>
+            </div>
+            <div>
+              <div class="carousel-img">
+                <img src="./assets/BOALogo.jpg" alt="">
+              </div>
+              <div class="carousel-content">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script
+      src="https://kit.fontawesome.com/27fb1a942d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script src="./custom.js"></script>
+  </body>
+</html>
+
+
+
+/* font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+.header {
+  display: flex;
+  padding: 10px 30px;
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url(./assets/headerBg.jpg);
+  background-position: center;
+}
+
+.dts-logo {
+  width: 30%;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: #394477;
+}
+
+.header-title {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+}
+
+.boa-logo {
+  display: flex;
+  width: 30%;
+  align-items: center;
+  margin-bottom: 15px;
+  justify-content: flex-end;
+}
+.boa-logo > img {
+  height: 40px;
+  object-fit: contain;
+}
+
+.main-content {
+  display: flex;
+  height: calc(100vh - 120px);
+}
+
+.left-division {
+  flex: 2;
+  background-color: #020825;
+}
+.right-division {
+  flex: 8;
+  /* background-color: black; */
+}
+ul.menu {
+  padding: 0;
+  list-style: none;
+  width: 400px;
+  margin: 0;
+  font-family: "Roboto";
+  font-weight: 500;
+  clear: both;
+  display: table;
+}
+ul.menu .list {
+  font-size: 14px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  height: 50px;
+  vertical-align: sub;
+  background: #020825;
+  clear: both;
+}
+ul.menu .list:after {
+  content: "\f107";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .list a {
+  text-decoration: none;
+  color: #fff;
+  padding: 17px 17px 17px 50px;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+}
+ul.menu .list a:hover {
+  background-color: #020825;
+  transition: 300ms all;
+  color: #fff;
+}
+ul.menu .list .items {
+  height: 0px;
+  overflow: hidden;
+}
+ul.menu .list .items a {
+  padding: 17px 17px 17px 50px;
+}
+ul.menu .list .items a:hover {
+  color: #fff;
+  transition: 300ms all;
+}
+ul.menu .active {
+  background-color: #03216a;
+}
+ul.menu .active:after {
+  content: "\f106";
+  font-family: FontAwesome;
+  position: absolute;
+  right: 17px;
+  top: 17px;
+  padding: 0px 5px;
+  color: #fff;
+}
+ul.menu .active > .items {
+  display: block;
+  background: #0251be;
+  padding: 0px;
+  height: auto;
+  color: #fff;
+  clear: both;
+  float: left;
+  width: 100%;
+}
+ul.menu .active > .items li {
+  padding: 0px;
+  list-style: none;
+}
+ul.menu .active > .items li:last-child {
+  padding-bottom: 0px;
+}
+ul.menu .active > a {
+  color: #fff;
+}
+ul.menu .active .list {
+  background-color: #0251be;
+}
+/* ul.menu .active .list a {
+    padding: 17px;
+  } */
+ul.menu .list > i{
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.4em;
+  left: 15px;
+}
+.active ul.items > li > i {
+  position: absolute;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 1.4em;
+  left: 15px;
+}
